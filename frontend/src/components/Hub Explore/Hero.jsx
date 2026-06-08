@@ -1,9 +1,8 @@
 
-import Chatbot from "../Chatbot"
 import LeadingCompany from "./LeadingCompany"
 import OurServices from "./ServiceDashboard"
 import TrustLable from "./TrustLable"
-
+import AirlineSupportChatbot from "../Chatbot1"
 const Hero = () => {
 
     return (
@@ -66,7 +65,8 @@ const Hero = () => {
                <LeadingCompany/>
             </section>
             <OurServices/>
-            <Chatbot/>
+
+            <AirlineSupportChatbot/>
         </>
     )
 }

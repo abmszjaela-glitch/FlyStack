@@ -1,7 +1,7 @@
 import {
   Plane, QrCode, Package, TrendingUp,
-  Users, Wrench, Star, LayoutDashboard,
-  Bell, MapPin, Shield, Code2,
+  Users,  LayoutDashboard,
+  Bell, MapPin, Shield, 
   ArrowRight,
 } from "lucide-react";
 
@@ -55,24 +55,6 @@ const services = [
     cta: "View Roster",
   },
   {
-    icon: Wrench,
-    title: "MRO Tracker",
-    desc: "Aircraft maintenance, repair, and overhaul logging with scheduled checks and defect tracking.",
-    color: "#E8623A",
-    bg: "rgba(232,98,58,0.08)",
-    category: "Airline Operations",
-    cta: "View MRO",
-  },
-  {
-    icon: Star,
-    title: "Miles & Rewards",
-    desc: "Earn, redeem, and transfer frequent flyer miles across partner airlines and retail brands.",
-    color: "#9B59D4",
-    bg: "rgba(155,89,212,0.08)",
-    category: "Loyalty & Experience",
-    cta: "View Miles",
-  },
-  {
     icon: LayoutDashboard,
     title: "Operations Dashboard",
     desc: "Live flight status board for operators with delay monitoring, gate assignments, and alerts.",
@@ -109,15 +91,6 @@ const services = [
     bg: "rgba(155,89,212,0.08)",
     category: "Loyalty & Experience",
     cta: "Get Cover",
-  },
-  {
-    icon: Code2,
-    title: "API Marketplace",
-    desc: "Connect third-party tools to FlyStack — NDC, GDS, payment gateways, and more.",
-    color: "#3AACCC",
-    bg: "rgba(58,172,204,0.08)",
-    category: "B2B & Agency",
-    cta: "Explore APIs",
   },
 ];
 
