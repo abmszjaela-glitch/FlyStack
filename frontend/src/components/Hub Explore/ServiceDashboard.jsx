@@ -1,7 +1,13 @@
 import {
-  Plane, QrCode, Package, TrendingUp,
-  Users,  LayoutDashboard,
-  Bell, MapPin, Shield, 
+  Plane,
+  QrCode,
+  Package,
+  TrendingUp,
+  Users,
+  LayoutDashboard,
+  Bell,
+  MapPin,
+  Shield,
   ArrowRight,
 } from "lucide-react";
 
@@ -96,35 +102,59 @@ const services = [
 
 export default function FlyStackServices() {
   return (
-    <section className="flex flex-col items-center bg-[#F5F9FC] px-4 py-4 pb-20"> {/* Decorative blurs */}
-      <div className="absolute top-20 -right-20 w-96 h-96 rounded-full opacity-[0.04] pointer-events-none" style={{ background: "#4F8EF7", filter: "blur(100px)" }} />
-      <div className="absolute -bottom-10 -left-10 w-80 h-80 rounded-full opacity-[0.03] pointer-events-none" style={{ background: "#E8623A", filter: "blur(90px)" }} />
-
+    <section className="flex flex-col items-center bg-[#F5F9FC] px-4 py-4 pb-20">
+      {" "}
+      {/* Decorative blurs */}
+      <div
+        className="absolute top-20 -right-20 w-96 h-96 rounded-full opacity-[0.04] pointer-events-none"
+        style={{ background: "#4F8EF7", filter: "blur(100px)" }}
+      />
+      <div
+        className="absolute -bottom-10 -left-10 w-80 h-80 rounded-full opacity-[0.03] pointer-events-none"
+        style={{ background: "#E8623A", filter: "blur(90px)" }}
+      />
       {/* Dot grid */}
       <div
         className="absolute inset-0 opacity-[0.025] pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(rgba(79,142,247,0.5) 1px, transparent 1px)",
+          backgroundImage:
+            "radial-gradient(rgba(79,142,247,0.5) 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
-
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <span
             className="inline-flex items-center gap-2.5 px-5 py-2 mb-5 text-[11px] font-bold tracking-[0.15em] uppercase rounded-full"
-            style={{ background: "rgba(79,142,247,0.08)", color: "#4F8EF7", border: "1px solid rgba(79,142,247,0.1)" }}
+            style={{
+              background: "rgba(79,142,247,0.08)",
+              color: "#4F8EF7",
+              border: "1px solid rgba(79,142,247,0.1)",
+            }}
           >
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#E8623A" }} />
+            <span
+              className="w-2 h-2 rounded-full animate-pulse"
+              style={{ background: "#E8623A" }}
+            />
             What We Offer
           </span>
-          <h2 className="text-4xl lg:text-[3.25rem] font-extrabold leading-[1.15] tracking-tight" style={{ color: "#1E1E3F" }}>
+          <h2
+            className="text-2xl lg:text-[3.25rem] font-bold leading-[1.15] tracking-tight"
+            style={{ color: "#1E1E3F" }}
+          >
             FlyStack Services
           </h2>
-          <div className="mt-4 mx-auto h-1 w-16 rounded-full" style={{ background: "linear-gradient(90deg, #4F8EF7, #E8623A)" }} />
-          <p className="mt-5 text-base max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(30,30,63,0.5)" }}>
-            The complete airline technology platform — from passenger booking to cargo operations, revenue management to B2B agency tools.
+          <div
+            className="mt-4 mx-auto h-1 w-16 rounded-full"
+            style={{ background: "linear-gradient(90deg, #4F8EF7, #E8623A)" }}
+          />
+          <p
+            className="mt-5 text-base max-w-xl mx-auto leading-relaxed"
+            style={{ color: "rgba(30,30,63,0.5)" }}
+          >
+            The complete airline technology platform — from passenger booking to
+            cargo operations, revenue management to B2B agency tools.
           </p>
         </div>
 
@@ -150,7 +180,11 @@ export default function FlyStackServices() {
                 {/* Category badge */}
                 <span
                   className="self-start text-[9px] font-bold tracking-[0.12em] uppercase px-2 py-1 rounded-md mb-4"
-                  style={{ background: s.bg, color: s.color, border: `1px solid ${s.color}20` }}
+                  style={{
+                    background: s.bg,
+                    color: s.color,
+                    border: `1px solid ${s.color}20`,
+                  }}
                 >
                   {s.category}
                 </span>
@@ -160,7 +194,11 @@ export default function FlyStackServices() {
                   className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
                   style={{ background: s.bg }}
                 >
-                  <Icon className="w-6 h-6" style={{ color: s.color }} strokeWidth={1.8} />
+                  <Icon
+                    className="w-6 h-6"
+                    style={{ color: s.color }}
+                    strokeWidth={1.8}
+                  />
                 </div>
 
                 {/* Animated line */}
@@ -170,17 +208,26 @@ export default function FlyStackServices() {
                 />
 
                 {/* Title */}
-                <h3 className="text-lg font-bold mb-3 tracking-tight" style={{ color: "#1E1E3F" }}>
+                <h3
+                  className="text-lg font-bold mb-3 tracking-tight"
+                  style={{ color: "#1E1E3F" }}
+                >
                   {s.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "rgba(30,30,63,0.5)" }}>
+                <p
+                  className="text-sm leading-relaxed mb-6 flex-grow"
+                  style={{ color: "rgba(30,30,63,0.5)" }}
+                >
                   {s.desc}
                 </p>
 
                 {/* CTA */}
-                <div className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 group-hover:gap-3" style={{ color: s.color }}>
+                <div
+                  className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 group-hover:gap-3"
+                  style={{ color: s.color }}
+                >
                   <span>{s.cta}</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>

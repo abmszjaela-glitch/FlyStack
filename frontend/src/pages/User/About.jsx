@@ -3,19 +3,19 @@ import { Reveal } from "../../Utils/Utils.jsx";
 export default function AboutSection() {
   const pillars = [
     {
-      icon: "🚀",
-      title: "Innovation First",
-      desc: "We leverage cutting-edge technology to reimagine how airlines operate and how passengers experience air travel.",
+      icon: "✈️",
+      title: "Smart Travel Solutions",
+      desc: "Simplifying every stage of your journey with modern digital services and personalized travel tools.",
     },
     {
-      icon: "🌐",
-      title: "Global Reach",
-      desc: "Connecting major cities and destinations worldwide through a comprehensive, reliable airline network.",
+      icon: "📡",
+      title: "Live Travel Insights",
+      desc: "Get real-time flight updates, schedule changes, and important travel information when it matters most.",
     },
     {
-      icon: "🤝",
-      title: "Trusted Partnership",
-      desc: "340+ airlines rely on FlyStack for operational intelligence, revenue optimization, and passenger satisfaction.",
+      icon: "🛡️",
+      title: "Passenger-Centered Service",
+      desc: "Designed to provide a smooth, secure, and stress-free travel experience from booking to arrival.",
     },
   ];
 
@@ -49,13 +49,13 @@ export default function AboutSection() {
             <em className="not-italic text-[#B8DDED]">of aviation.</em>
           </h2>
           <p className="text-lg font-light leading-[1.9] text-white/65 max-w-3xl mx-auto">
-            FlyStack is a modern airline management and travel platform designed
-            to simplify every aspect of air travel. Our mission is to deliver
-            seamless flight booking, operational excellence, and exceptional
-            customer experiences through innovative technology. By combining
-            advanced aviation solutions with user-friendly design, FlyStack
-            empowers travelers, airlines, and travel partners to connect more
-            efficiently across the globe.
+            FlyStack is a modern airline service hub designed to make air travel
+            simpler, faster, and more convenient. From flight search and online
+            check-in to baggage services, travel information, and real-time
+            flight updates, we bring essential travel services together in one
+            easy-to-use platform. Our goal is to provide passengers with a
+            seamless travel experience through reliable digital solutions, smart
+            assistance, and customer-focused support.
           </p>
         </Reveal>
 
@@ -68,8 +68,12 @@ export default function AboutSection() {
                            hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
                 <span className="text-4xl block mb-5">{p.icon}</span>
-                <p className="text-lg font-semibold text-white mb-3">{p.title}</p>
-                <p className="text-sm font-light leading-[1.8] text-white/55">{p.desc}</p>
+                <p className="text-lg font-semibold text-white mb-3">
+                  {p.title}
+                </p>
+                <p className="text-sm font-light leading-[1.8] text-white/55">
+                  {p.desc}
+                </p>
               </div>
             </Reveal>
           ))}

@@ -1,12 +1,9 @@
 import {
-  FaChartLine,
-  FaMoneyBillWave,
+  FaMobileScreenButton,
+  FaHeadset,
   FaPlaneDeparture,
-  FaRoute,
   FaBell,
   FaMagnifyingGlass,
-  FaCircleInfo,
-  FaEarthAsia,
   FaCouch,
   FaSuitcaseRolling,
   FaMobileScreen,
@@ -15,54 +12,53 @@ import {
 export const features = [
   {
     Icon: FaPlaneDeparture,
-    name: "Real-Time Flight Operations",
-    desc: "Monitor live flight movements including departures, arrivals, delays, and gate updates in a centralized control system.",
+    name: "Easy Flight Booking",
+    desc: "Find the best flights and complete your reservation in just a few clicks.",
   },
   {
-    Icon: FaChartLine,
-    name: "Advanced Performance Analytics",
-    desc: "Gain insights into airline performance metrics including efficiency, fuel consumption, and operational KPIs.",
+    Icon: FaMobileScreenButton,
+    name: "Digital Check-In",
+    desc: "Check in from anywhere and access your boarding pass instantly.",
   },
   {
-    Icon: FaMoneyBillWave,
-    name: "Revenue & Fare Optimization",
-    desc: "Manage dynamic pricing strategies, monitor revenue streams, and optimize profitability across all routes.",
-  },
-  {
-    Icon: FaRoute,
-    name: "Intelligent Route Optimization",
-    desc: "Identify optimal flight paths to minimize fuel costs, reduce travel time, and improve scheduling efficiency.",
+    Icon: FaSuitcaseRolling,
+    name: "Baggage Management",
+    desc: "Manage baggage allowances, purchase extras, and track your luggage.",
   },
   {
     Icon: FaBell,
-    name: "Smart Operational Alerts",
-    desc: "Receive real-time notifications for delays, weather disruptions, gate changes, and critical operational events.",
+    name: "Flight Alerts",
+    desc: "Receive real-time notifications for delays, gate changes, and boarding updates.",
+  },
+  {
+    Icon: FaHeadset,
+    name: "24/7 Customer Support",
+    desc: "Get assistance anytime for bookings, refunds, baggage, and travel inquiries.",
   },
 ];
 
 export const steps = [
   {
     num: "1",
-    title: "Initialize Airline Ecosystem",
-    text: "Connect core systems including fleet management, airport integrations, crew data, and operational databases into FlyStack.",
+    title: "Search Flights",
+    text: "Find available flights, compare schedules, and choose the best option for your journey.",
   },
   {
     num: "2",
-    title: "Enable Real-Time Flight Monitoring",
-    text: "Track departures, arrivals, delays, gate changes, and live aircraft status through a unified operational dashboard.",
+    title: "Book & Manage Trips",
+    text: "Complete your booking securely and manage your travel details from one convenient location.",
   },
   {
     num: "3",
-    title: "Unlock Operational Intelligence",
-    text: "Leverage analytics and predictive insights to optimize routes, fuel consumption, passenger load, and scheduling efficiency.",
+    title: "Track Flight & Baggage",
+    text: "Stay informed with real-time flight updates and baggage tracking throughout your trip.",
   },
   {
     num: "4",
-    title: "Maximize Profitability & Passenger Experience",
-    text: "Improve revenue performance, reduce operational disruptions, and deliver a seamless end-to-end travel experience.",
+    title: "Get Support Anytime",
+    text: "Use our smart chatbot and customer support services to resolve travel-related questions quickly.",
   },
 ];
-
 
 export const metrics = [
   { num: "1.2M+", label: "Flights Managed" },
@@ -77,25 +73,26 @@ export const flightCards = [
     path: "/Flight/search-flight",
     Icon: FaMagnifyingGlass,
     title: "Search Flights",
-    desc: "Find the perfect flight with FlyStack's intelligent flight search system. Passengers can easily search routes, compare schedules, explore fare options, and select the most convenient journey based on destination, travel dates, and preferences.",
-    tag: "Book Now",
+    desc: "Find and compare available flights, schedules, and fares for your next journey.",
+    tag: "Search Now",
   },
   {
-    id: "flight-status",
-    Icon: FaCircleInfo,
-    title: "Flight Status",
-    desc: "Stay informed with real-time flight updates. The Flight Status service provides live information about departures, arrivals, delays, gate changes, and cancellations.",
-    tag: "Track Flight",
+    id: "baggage-services",
+    path: "/Services/baggage",
+    Icon: FaSuitcaseRolling,
+    title: "Baggage Services",
+    desc: "Track baggage, view baggage allowances, and access support for lost or delayed luggage.",
+    tag: "Manage Baggage",
   },
   {
-    id: "route-network",
-    Icon: FaEarthAsia,
-    title: "Route Network",
-    desc: "Explore our extensive route network connecting major cities and destinations around the world.",
-    tag: "Explore Routes",
+    id: "customer-support",
+    path: "/Support",
+    Icon: FaHeadset,
+    title: "24/7 Support",
+    desc: "Get instant assistance through our support center and AI-powered chatbot for travel-related inquiries.",
+    tag: "Get Help",
   },
 ];
-
 /* ─── SERVICE CARDS ─── */
 export const serviceCards = [
   {
@@ -103,24 +100,27 @@ export const serviceCards = [
     path: "/services/seat-selection",
     Icon: FaCouch,
     title: "Seat Selection",
-    desc: "Choose the seat that best suits your travel needs.",
+    desc: "Reserve your favorite seat and customize your journey for maximum comfort.",
   },
   {
-    id: "baggage",
+    id: "baggage-services",
+    path: "/services/baggage",
     Icon: FaSuitcaseRolling,
-    title: "Baggage",
-    desc: "Manage your baggage with ease through our convenient baggage services.",
+    title: "Baggage Management",
+    desc: "View baggage allowances, track luggage status, and receive baggage support instantly.",
   },
   {
     id: "online-check-in",
+    path: "/services/online-check-in",
     Icon: FaMobileScreen,
     title: "Online Check-In",
-    desc: "Save time at the airport with our secure online check-in service.",
+    desc: "Check in securely from anywhere and receive your digital boarding pass in minutes.",
   },
   {
-    id: "visa-travel-guide",
+    id: "travel-assistance",
+    path: "/services/travel-assistance",
     Icon: FaPassport,
-    title: "Visa & Travel Guide",
-    desc: "Travel confidently with access to up-to-date visa requirements and destination information.",
+    title: "Travel Assistance",
+    desc: "Get visa guidance, travel requirements, destination updates, and passenger support.",
   },
 ];

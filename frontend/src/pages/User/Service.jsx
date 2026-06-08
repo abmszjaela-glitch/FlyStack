@@ -9,8 +9,13 @@ function useReveal() {
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); io.unobserve(el); } },
-      { threshold: 0.12 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          io.unobserve(el);
+        }
+      },
+      { threshold: 0.12 },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -44,22 +49,27 @@ export default function ServicesSection() {
       id="services"
       className="bg-[#F5F9FC] border-t border-[rgba(74,157,189,0.18)] px-14 py-24 relative overflow-hidden"
     >
-      <div className="absolute top-1/2 right-0 w-96 h-96 rounded-full pointer-events-none -translate-y-1/2
-                     bg-[radial-gradient(circle,rgba(220,187,135,0.12)_0%,transparent_70%)] blur-[80px]" />
+      <div
+        className="absolute top-1/2 right-0 w-96 h-96 rounded-full pointer-events-none -translate-y-1/2
+                     bg-[radial-gradient(circle,rgba(220,187,135,0.12)_0%,transparent_70%)] blur-[80px]"
+      />
 
       <div className="grid grid-cols-2 gap-20 items-center">
         {/* Left */}
         <div>
           <Reveal>
-            <p className="text-[11px] uppercase tracking-[1.5px] text-[#dcbb87] font-medium mb-6">
+            <p className="text-[11px] uppercase tracking-[1.5px] text-[#4A9DBD] font-medium mb-6">
               Add-On Services
             </p>
           </Reveal>
           <Reveal delay={80}>
-            <h2 className="gloock font-light text-[clamp(36px,4vw,54px)] tracking-[-0.5px]
-                           text-[#0A1E2D] leading-[1.1] mb-7">
-              Travel your way,<br />
-              <em className="not-italic text-[#dcbb87]">every detail.</em>
+            <h2
+              className="gloock font-light text-[clamp(36px,4vw,54px)] tracking-[-0.5px]
+                           text-[#0A1E2D] leading-[1.1] mb-7"
+            >
+              Travel your way,
+              <br />
+              <em className="not-italic text-[#4A9DBD]">every detail.</em>
             </h2>
           </Reveal>
           <Reveal delay={120}>
@@ -91,15 +101,23 @@ export default function ServicesSection() {
                 <div
                   id={s.id}
                   className="service-card relative scroll-mt-28 bg-white rounded-[18px] p-7
-                               border border-[rgba(74,157,189,0.15)] overflow-hidden
-                               hover:-translate-y-1 hover:shadow-[0_6px_28px_rgba(13,45,68,0.10)]
-                               hover:border-[#dcbb87] transition-all duration-300 cursor-default">
-                  <div className="w-11 h-11 rounded-xl mb-5 flex items-center justify-center text-[22px]
-                                 bg-gradient-to-br from-[#fdf3e3] to-[#f5e0b5] text-[#c9a96e]">
+             border border-[rgba(38,149,235,0.15)] overflow-hidden
+             hover:-translate-y-1 hover:shadow-[0_6px_28px_rgba(0,55,127,0.12)]
+             hover:border-[#2695EB] transition-all duration-300 cursor-default"
+                >
+                  <div
+                    className="w-11 h-11 rounded-xl mb-5 flex items-center justify-center text-[22px]
+               bg-gradient-to-br from-[#EAF5FF] to-[#CFE8FF]
+               text-[#00377F]"
+                  >
                     <Icon />
                   </div>
-                  <p className="text-base font-semibold text-[#0D2D44] mb-2">{s.title}</p>
-                  <p className="text-sm leading-[1.75] text-[#2E5470] font-light">{s.desc}</p>
+                  <p className="text-base font-semibold text-[#0D2D44] mb-2">
+                    {s.title}
+                  </p>
+                  <p className="text-sm leading-[1.75] text-[#2E5470] font-light">
+                    {s.desc}
+                  </p>
                 </div>
               </Reveal>
             );

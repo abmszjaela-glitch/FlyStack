@@ -37,7 +37,14 @@ function CloseSVG({ size = 24, color = "white" }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="11" stroke={color} strokeWidth="1.5" strokeOpacity="0.3" />
+      <circle
+        cx="12"
+        cy="12"
+        r="11"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeOpacity="0.3"
+      />
       <path
         d="M8 8L16 16M16 8L8 16"
         stroke={color}
@@ -61,58 +68,177 @@ function PlaneSVG3D({ size = 34 }) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient id="pg1" x1="0" y1="0" x2="40" y2="34" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#e2eaf8" />
-          <stop offset="45%"  stopColor="#f8faff" />
+        <linearGradient
+          id="pg1"
+          x1="0"
+          y1="0"
+          x2="40"
+          y2="34"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#e2eaf8" />
+          <stop offset="45%" stopColor="#f8faff" />
           <stop offset="100%" stopColor="#b0c4e8" />
         </linearGradient>
-        <linearGradient id="pg2" x1="14" y1="4" x2="26" y2="18" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#2695EB" />
+        <linearGradient
+          id="pg2"
+          x1="14"
+          y1="4"
+          x2="26"
+          y2="18"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#2695EB" />
           <stop offset="100%" stopColor="#00377F" />
         </linearGradient>
-        <linearGradient id="pg3" x1="14" y1="30" x2="26" y2="18" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#2695EB" />
+        <linearGradient
+          id="pg3"
+          x1="14"
+          y1="30"
+          x2="26"
+          y2="18"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#2695EB" />
           <stop offset="100%" stopColor="#00377F" />
         </linearGradient>
-        <linearGradient id="pg4" x1="4" y1="6" x2="12" y2="18" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#2695EB" />
+        <linearGradient
+          id="pg4"
+          x1="4"
+          y1="6"
+          x2="12"
+          y2="18"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#2695EB" />
           <stop offset="100%" stopColor="#00377F" />
         </linearGradient>
-        <linearGradient id="pg5" x1="6" y1="17" x2="18" y2="22" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#475569" />
+        <linearGradient
+          id="pg5"
+          x1="6"
+          y1="17"
+          x2="18"
+          y2="22"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#475569" />
           <stop offset="100%" stopColor="#94a3b8" />
         </linearGradient>
         <radialGradient id="pg6" cx="35%" cy="30%">
-          <stop offset="0%"   stopColor="#F1F2FC" />
+          <stop offset="0%" stopColor="#F1F2FC" />
           <stop offset="100%" stopColor="#2695EB" />
         </radialGradient>
         <filter id="pShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="3" stdDeviation="2.5" floodColor="#00377F" floodOpacity="0.3" />
+          <feDropShadow
+            dx="0"
+            dy="3"
+            stdDeviation="2.5"
+            floodColor="#00377F"
+            floodOpacity="0.3"
+          />
         </filter>
       </defs>
       <g filter="url(#pShadow)">
         <ellipse cx="21" cy="17" rx="16" ry="6" fill="url(#pg1)" />
-        <ellipse cx="20" cy="13.5" rx="12" ry="2.8" fill="rgba(255,255,255,0.42)" />
-        <path d="M37 17 C40 16.3 40.5 17 40 17.6 C39.5 18.2 37 18 37 17Z" fill="#d1ddf5" />
+        <ellipse
+          cx="20"
+          cy="13.5"
+          rx="12"
+          ry="2.8"
+          fill="rgba(255,255,255,0.42)"
+        />
+        <path
+          d="M37 17 C40 16.3 40.5 17 40 17.6 C39.5 18.2 37 18 37 17Z"
+          fill="#d1ddf5"
+        />
         <path d="M6 17 C5 12 7.5 8 10 9 L11 17Z" fill="url(#pg4)" />
-        <path d="M7 16 C6.5 12.5 8.5 9.5 10 10 L10.5 16Z" fill="rgba(255,255,255,0.22)" />
+        <path
+          d="M7 16 C6.5 12.5 8.5 9.5 10 10 L10.5 16Z"
+          fill="rgba(255,255,255,0.22)"
+        />
         <path d="M24 16 L13 4 L12 6.5 L22 17Z" fill="url(#pg2)" />
         <path d="M24 18 L13 30 L12 27.5 L22 17Z" fill="url(#pg3)" />
-        <path d="M23 16.3 L15 6.8 L14.5 8 L21.5 17Z" fill="rgba(255,255,255,0.18)" />
-        <path d="M9.5 16.5 L6 13 L5.5 14 L8.5 17Z" fill="url(#pg4)" opacity="0.85" />
-        <path d="M9.5 17.5 L6 21 L5.5 20 L8.5 17Z" fill="url(#pg4)" opacity="0.85" />
+        <path
+          d="M23 16.3 L15 6.8 L14.5 8 L21.5 17Z"
+          fill="rgba(255,255,255,0.18)"
+        />
+        <path
+          d="M9.5 16.5 L6 13 L5.5 14 L8.5 17Z"
+          fill="url(#pg4)"
+          opacity="0.85"
+        />
+        <path
+          d="M9.5 17.5 L6 21 L5.5 20 L8.5 17Z"
+          fill="url(#pg4)"
+          opacity="0.85"
+        />
         <ellipse cx="18" cy="19.5" rx="4" ry="1.8" fill="url(#pg5)" />
-        <ellipse cx="18" cy="18.8" rx="2.8" ry="0.9" fill="rgba(255,255,255,0.18)" />
+        <ellipse
+          cx="18"
+          cy="18.8"
+          rx="2.8"
+          ry="0.9"
+          fill="rgba(255,255,255,0.18)"
+        />
         <ellipse cx="14" cy="19.5" rx="1.2" ry="1.5" fill="#1C1C1C" />
         <circle cx="33" cy="15.5" r="1.4" fill="url(#pg6)" />
         <circle cx="29" cy="15.5" r="1.4" fill="url(#pg6)" />
         <circle cx="25" cy="15.5" r="1.4" fill="url(#pg6)" />
-        <rect x="28" y="14.5" width="2.5" height="5" rx="0.8" fill="none" stroke="rgba(100,116,139,0.4)" strokeWidth="0.6" />
-        <line x1="0"  y1="14" x2="4.5" y2="14" stroke="rgba(255,255,255,0.55)" strokeWidth="1"   strokeLinecap="round" />
-        <line x1="0"  y1="17" x2="5"   y2="17" stroke="rgba(255,255,255,0.65)" strokeWidth="1.2" strokeLinecap="round" />
-        <line x1="0"  y1="20" x2="4.5" y2="20" stroke="rgba(255,255,255,0.55)" strokeWidth="1"   strokeLinecap="round" />
-        <line x1="1"  y1="11.5" x2="3.5" y2="11.5" stroke="rgba(255,255,255,0.3)" strokeWidth="0.7" strokeLinecap="round" />
-        <line x1="1"  y1="22.5" x2="3.5" y2="22.5" stroke="rgba(255,255,255,0.3)" strokeWidth="0.7" strokeLinecap="round" />
+        <rect
+          x="28"
+          y="14.5"
+          width="2.5"
+          height="5"
+          rx="0.8"
+          fill="none"
+          stroke="rgba(100,116,139,0.4)"
+          strokeWidth="0.6"
+        />
+        <line
+          x1="0"
+          y1="14"
+          x2="4.5"
+          y2="14"
+          stroke="rgba(255,255,255,0.55)"
+          strokeWidth="1"
+          strokeLinecap="round"
+        />
+        <line
+          x1="0"
+          y1="17"
+          x2="5"
+          y2="17"
+          stroke="rgba(255,255,255,0.65)"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+        />
+        <line
+          x1="0"
+          y1="20"
+          x2="4.5"
+          y2="20"
+          stroke="rgba(255,255,255,0.55)"
+          strokeWidth="1"
+          strokeLinecap="round"
+        />
+        <line
+          x1="1"
+          y1="11.5"
+          x2="3.5"
+          y2="11.5"
+          stroke="rgba(255,255,255,0.3)"
+          strokeWidth="0.7"
+          strokeLinecap="round"
+        />
+        <line
+          x1="1"
+          y1="22.5"
+          x2="3.5"
+          y2="22.5"
+          stroke="rgba(255,255,255,0.3)"
+          strokeWidth="0.7"
+          strokeLinecap="round"
+        />
       </g>
     </svg>
   );
@@ -142,7 +268,8 @@ function ContactForm({ onClose }) {
         className="relative w-[420px] rounded-3xl overflow-hidden animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
         style={{
           background: "#FFFFFF",
-          boxShadow: "0 8px 48px rgba(0,55,127,0.25), 0 2px 8px rgba(0,0,0,0.08)",
+          boxShadow:
+            "0 8px 48px rgba(0,55,127,0.25), 0 2px 8px rgba(0,0,0,0.08)",
         }}
       >
         {/* Header */}
@@ -170,7 +297,10 @@ function ContactForm({ onClose }) {
               </h2>
               <p
                 className="text-sm mt-0.5"
-                style={{ color: "rgba(255,255,255,0.7)", fontFamily: "'Poppins', sans-serif" }}
+                style={{
+                  color: "rgba(255,255,255,0.7)",
+                  fontFamily: "'Poppins', sans-serif",
+                }}
               >
                 We'll get back to you within 24 hours
               </p>
@@ -178,7 +308,10 @@ function ContactForm({ onClose }) {
             <button
               onClick={onClose}
               className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:scale-110 cursor-pointer"
-              style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}
+              style={{
+                background: "rgba(255,255,255,0.12)",
+                border: "1px solid rgba(255,255,255,0.2)",
+              }}
             >
               <CloseSVG size={20} color="white" />
             </button>
@@ -191,10 +324,18 @@ function ContactForm({ onClose }) {
             <div className="text-center py-8">
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ background: "linear-gradient(135deg, #00377F, #2695EB)" }}
+                style={{
+                  background: "linear-gradient(135deg, #00377F, #2695EB)",
+                }}
               >
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 13l4 4L19 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path
+                    d="M5 13l4 4L19 7"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
               <h3
@@ -224,8 +365,18 @@ function ContactForm({ onClose }) {
           ) : (
             <div className="flex flex-col gap-4">
               {[
-                { label: "Full Name", name: "name", type: "text", placeholder: "John Silva" },
-                { label: "Email Address", name: "email", type: "email", placeholder: "john@example.com" },
+                {
+                  label: "Full Name",
+                  name: "name",
+                  type: "text",
+                  placeholder: "John Silva",
+                },
+                {
+                  label: "Email Address",
+                  name: "email",
+                  type: "email",
+                  placeholder: "john@example.com",
+                },
               ].map(({ label, name, type, placeholder }) => (
                 <div key={name}>
                   <label
@@ -248,7 +399,9 @@ function ContactForm({ onClose }) {
                       fontFamily: "'Poppins', sans-serif",
                     }}
                     onFocus={(e) => (e.target.style.borderColor = "#2695EB")}
-                    onBlur={(e) => (e.target.style.borderColor = "rgba(0,55,127,0.15)")}
+                    onBlur={(e) =>
+                      (e.target.style.borderColor = "rgba(0,55,127,0.15)")
+                    }
                   />
                 </div>
               ))}
@@ -274,7 +427,9 @@ function ContactForm({ onClose }) {
                     fontFamily: "'Poppins', sans-serif",
                   }}
                   onFocus={(e) => (e.target.style.borderColor = "#2695EB")}
-                  onBlur={(e) => (e.target.style.borderColor = "rgba(0,55,127,0.15)")}
+                  onBlur={(e) =>
+                    (e.target.style.borderColor = "rgba(0,55,127,0.15)")
+                  }
                 />
               </div>
 
@@ -282,7 +437,8 @@ function ContactForm({ onClose }) {
                 onClick={handleSubmit}
                 className="w-full py-3 rounded-xl text-sm font-semibold text-white cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg"
                 style={{
-                  background: "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
+                  background:
+                    "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
                   fontFamily: "'Poppins', sans-serif",
                   boxShadow: "0 4px 20px rgba(0,55,127,0.35)",
                 }}
@@ -336,10 +492,12 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
                   color: "#1C1C1C",
                   borderRadius: "18px 18px 18px 4px",
                   border: "1px solid rgba(0,55,127,0.1)",
-                  boxShadow: "0 2px 12px rgba(0,55,127,0.08), 0 1px 3px rgba(0,0,0,0.04)",
+                  boxShadow:
+                    "0 2px 12px rgba(0,55,127,0.08), 0 1px 3px rgba(0,0,0,0.04)",
                 }
               : {
-                  background: "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
+                  background:
+                    "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
                   color: "#FFFFFF",
                   borderRadius: "18px 18px 4px 18px",
                   boxShadow: "0 6px 20px rgba(0,55,127,0.4)",
@@ -363,14 +521,16 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
                   border: "1.5px solid rgba(0,55,127,0.15)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "linear-gradient(135deg, #00377F, #2695EB)";
+                  e.currentTarget.style.background =
+                    "linear-gradient(135deg, #00377F, #2695EB)";
                   e.currentTarget.style.color = "#FFFFFF";
                   e.currentTarget.style.border = "1.5px solid transparent";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = "#F1F2FC";
                   e.currentTarget.style.color = "#00377F";
-                  e.currentTarget.style.border = "1.5px solid rgba(0,55,127,0.15)";
+                  e.currentTarget.style.border =
+                    "1.5px solid rgba(0,55,127,0.15)";
                 }}
               >
                 {option.label}
@@ -381,7 +541,10 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
 
         <div
           className={`text-[9.5px] mt-1 px-1 ${isBot ? "" : "text-right"}`}
-          style={{ color: "rgba(28,28,28,0.3)", fontFamily: "'Poppins', sans-serif" }}
+          style={{
+            color: "rgba(28,28,28,0.3)",
+            fontFamily: "'Poppins', sans-serif",
+          }}
         >
           {fmt(time)}
         </div>
@@ -397,7 +560,8 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
     <div
       className="relative overflow-hidden px-5 pt-[18px] pb-5"
       style={{
-        background: "linear-gradient(135deg, #00377F 0%, #0052b8 45%, #2695EB 100%)",
+        background:
+          "linear-gradient(135deg, #00377F 0%, #0052b8 45%, #2695EB 100%)",
       }}
     >
       {/* Ambient layers */}
@@ -425,7 +589,8 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
             background: "rgba(255,255,255,0.12)",
             border: "1.5px solid rgba(255,255,255,0.22)",
             backdropFilter: "blur(10px)",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)",
+            boxShadow:
+              "0 4px 16px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)",
           }}
         >
           <PlaneSVG3D />
@@ -446,7 +611,10 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
             />
             <span
               className="text-xs font-medium"
-              style={{ color: "rgba(255,255,255,0.7)", fontFamily: "'Poppins', sans-serif" }}
+              style={{
+                color: "rgba(255,255,255,0.7)",
+                fontFamily: "'Poppins', sans-serif",
+              }}
             >
               Online · Information Center
             </span>
@@ -462,7 +630,11 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
               title: minimized ? "Expand" : "Minimize",
               action: onToggleMinimize,
             },
-            { icon: <CloseSVG size={16} color="white" />, title: "Close", action: onClose },
+            {
+              icon: <CloseSVG size={16} color="white" />,
+              title: "Close",
+              action: onClose,
+            },
           ].map(({ icon, title, action }) => (
             <button
               key={title}
@@ -486,14 +658,14 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
 // ─── Chatbot (main) ───────────────────────────────────────────────────────────
 
 export default function Chatbot() {
-  const [open, setOpen]               = useState(false);
-  const [minimized, setMinimized]     = useState(false);
-  const [messages, setMessages]       = useState([]);
-  const [unread, setUnread]           = useState(0);
+  const [open, setOpen] = useState(false);
+  const [minimized, setMinimized] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [unread, setUnread] = useState(0);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [showForm, setShowForm]       = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
-  const bottomRef      = useRef(null);
+  const bottomRef = useRef(null);
   const hasInitialized = useRef(false);
 
   useEffect(() => {
@@ -540,7 +712,10 @@ export default function Chatbot() {
       ? {
           id: Date.now() + 1,
           from: "bot",
-          text: nodeData.answer ?? nodeData.question ?? "Please select an option from below.",
+          text:
+            nodeData.answer ??
+            nodeData.question ??
+            "Please select an option from below.",
           options: nodeData.options ?? chatbotData["root"].options,
           time: new Date(),
         }
@@ -573,7 +748,6 @@ export default function Chatbot() {
 
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif" }}>
-
       {/* ── Contact Form Modal ── */}
       {showForm && <ContactForm onClose={() => setShowForm(false)} />}
 
@@ -608,7 +782,10 @@ export default function Chatbot() {
                 {messages.length === 0 ? (
                   <div
                     className="flex justify-center items-center h-full text-sm"
-                    style={{ color: "rgba(28,28,28,0.4)", fontFamily: "'Poppins', sans-serif" }}
+                    style={{
+                      color: "rgba(28,28,28,0.4)",
+                      fontFamily: "'Poppins', sans-serif",
+                    }}
                   >
                     Click the button below to get help
                   </div>
@@ -628,13 +805,17 @@ export default function Chatbot() {
               {/* Footer with Contact Us button */}
               <div
                 className="px-3.5 pt-3 pb-3.5 flex flex-col gap-2.5"
-                style={{ background: "#FFFFFF", borderTop: "1px solid rgba(0,55,127,0.07)" }}
+                style={{
+                  background: "#FFFFFF",
+                  borderTop: "1px solid rgba(0,55,127,0.07)",
+                }}
               >
                 <button
                   onClick={() => setShowForm(true)}
                   className="w-full py-2.5 rounded-xl text-sm font-semibold text-white cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg"
                   style={{
-                    background: "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
+                    background:
+                      "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
                     fontFamily: "'Poppins', sans-serif",
                     boxShadow: "0 4px 16px rgba(0,55,127,0.3)",
                   }}
@@ -643,7 +824,10 @@ export default function Chatbot() {
                 </button>
                 <p
                   className="text-center text-[10px] tracking-wide"
-                  style={{ color: "rgba(28,28,28,0.25)", fontFamily: "'Poppins', sans-serif" }}
+                  style={{
+                    color: "rgba(28,28,28,0.25)",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}
                 >
                   ⚡ Information Hub · 24/7 Support · No booking required
                 </p>
