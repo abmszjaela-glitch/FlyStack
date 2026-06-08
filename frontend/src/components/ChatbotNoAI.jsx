@@ -7,13 +7,14 @@ import chatbotData from "../data/chatbotData.js";
 // Add to your index.html or main CSS:
 // @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Gloock&family=Poppins:wght@400;500;600&display=swap');
 
-// ─── Color Palette ───────────────────────────────────────────────────────────
-// Primary Dark Blue : #00377F
-// Primary Blue      : #2695EB
-// Light BG          : #F1F2FC
-// White             : #FFFFFF
-// Warm Gray         : #F0EBE8
-// Dark / Text       : #1C1C1C
+// ─── FlyStack Color Palette ──────────────────────────────────────────────────
+// Navy              : #0D2D44
+// Primary Blue      : #4A9DBD
+// Mid Blue          : #2E5470
+// Light Blue        : #7DC4E0
+// Page BG           : #F5F9FC
+// Sky               : #DAEEF8
+// Text              : #0A1E2D
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
@@ -88,8 +89,8 @@ function PlaneSVG3D({ size = 34 }) {
           y2="18"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0%" stopColor="#2695EB" />
-          <stop offset="100%" stopColor="#00377F" />
+          <stop offset="0%" stopColor="#4A9DBD" />
+          <stop offset="100%" stopColor="#0D2D44" />
         </linearGradient>
         <linearGradient
           id="pg3"
@@ -99,8 +100,8 @@ function PlaneSVG3D({ size = 34 }) {
           y2="18"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0%" stopColor="#2695EB" />
-          <stop offset="100%" stopColor="#00377F" />
+          <stop offset="0%" stopColor="#4A9DBD" />
+          <stop offset="100%" stopColor="#0D2D44" />
         </linearGradient>
         <linearGradient
           id="pg4"
@@ -110,8 +111,8 @@ function PlaneSVG3D({ size = 34 }) {
           y2="18"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0%" stopColor="#2695EB" />
-          <stop offset="100%" stopColor="#00377F" />
+          <stop offset="0%" stopColor="#4A9DBD" />
+          <stop offset="100%" stopColor="#0D2D44" />
         </linearGradient>
         <linearGradient
           id="pg5"
@@ -125,15 +126,15 @@ function PlaneSVG3D({ size = 34 }) {
           <stop offset="100%" stopColor="#94a3b8" />
         </linearGradient>
         <radialGradient id="pg6" cx="35%" cy="30%">
-          <stop offset="0%" stopColor="#F1F2FC" />
-          <stop offset="100%" stopColor="#2695EB" />
+          <stop offset="0%" stopColor="#F5F9FC" />
+          <stop offset="100%" stopColor="#4A9DBD" />
         </radialGradient>
         <filter id="pShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow
             dx="0"
             dy="3"
             stdDeviation="2.5"
-            floodColor="#00377F"
+            floodColor="#0D2D44"
             floodOpacity="0.3"
           />
         </filter>
@@ -180,7 +181,7 @@ function PlaneSVG3D({ size = 34 }) {
           ry="0.9"
           fill="rgba(255,255,255,0.18)"
         />
-        <ellipse cx="14" cy="19.5" rx="1.2" ry="1.5" fill="#1C1C1C" />
+        <ellipse cx="14" cy="19.5" rx="1.2" ry="1.5" fill="#0A1E2D" />
         <circle cx="33" cy="15.5" r="1.4" fill="url(#pg6)" />
         <circle cx="29" cy="15.5" r="1.4" fill="url(#pg6)" />
         <circle cx="25" cy="15.5" r="1.4" fill="url(#pg6)" />
@@ -262,21 +263,21 @@ function ContactForm({ onClose }) {
   return (
     <div
       className="fixed inset-0 z-[10000] flex items-center justify-center"
-      style={{ background: "rgba(0,55,127,0.45)", backdropFilter: "blur(6px)" }}
+      style={{ background: "rgba(13,45,68,0.45)", backdropFilter: "blur(6px)" }}
     >
       <div
         className="relative w-[420px] rounded-3xl overflow-hidden animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
         style={{
           background: "#FFFFFF",
           boxShadow:
-            "0 8px 48px rgba(0,55,127,0.25), 0 2px 8px rgba(0,0,0,0.08)",
+            "0 8px 48px rgba(13,45,68,0.25), 0 2px 8px rgba(0,0,0,0.08)",
         }}
       >
         {/* Header */}
         <div
           className="relative px-6 pt-6 pb-5 overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
+            background: "linear-gradient(135deg, #0D2D44 0%, #4A9DBD 100%)",
           }}
         >
           <div
@@ -299,7 +300,6 @@ function ContactForm({ onClose }) {
                 className="text-sm mt-0.5"
                 style={{
                   color: "rgba(255,255,255,0.7)",
-                  fontFamily: "'Poppins', sans-serif",
                 }}
               >
                 We'll get back to you within 24 hours
@@ -319,13 +319,13 @@ function ContactForm({ onClose }) {
         </div>
 
         {/* Body */}
-        <div className="px-6 py-6" style={{ background: "#F1F2FC" }}>
+        <div className="px-6 py-6" style={{ background: "#F5F9FC" }}>
           {submitted ? (
             <div className="text-center py-8">
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                 style={{
-                  background: "linear-gradient(135deg, #00377F, #2695EB)",
+                  background: "linear-gradient(135deg, #0D2D44, #4A9DBD)",
                 }}
               >
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
@@ -339,14 +339,13 @@ function ContactForm({ onClose }) {
                 </svg>
               </div>
               <h3
-                className="text-xl font-black text-[#1C1C1C] mb-2"
+                className="text-xl font-black text-[#0A1E2D] mb-2"
                 style={{ fontFamily: "'Gloock', serif" }}
               >
                 Message Sent!
               </h3>
               <p
-                className="text-sm text-[#1C1C1C]/60"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
+                className="text-sm text-[#0A1E2D]/60"
               >
                 Thank you for reaching out. Our team will contact you shortly.
               </p>
@@ -354,9 +353,8 @@ function ContactForm({ onClose }) {
                 onClick={onClose}
                 className="mt-6 px-6 py-2.5 rounded-full text-sm font-semibold text-white cursor-pointer transition-all hover:scale-105"
                 style={{
-                  background: "linear-gradient(135deg, #00377F, #2695EB)",
-                  fontFamily: "'Poppins', sans-serif",
-                  boxShadow: "0 4px 16px rgba(0,55,127,0.3)",
+                  background: "linear-gradient(135deg, #0D2D44, #4A9DBD)",
+                  boxShadow: "0 4px 16px rgba(13,45,68,0.3)",
                 }}
               >
                 Close
@@ -380,8 +378,7 @@ function ContactForm({ onClose }) {
               ].map(({ label, name, type, placeholder }) => (
                 <div key={name}>
                   <label
-                    className="block text-xs font-semibold mb-1.5 text-[#00377F]"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}
+                    className="block text-xs font-semibold mb-1.5 text-[#0D2D44]"
                   >
                     {label}
                   </label>
@@ -394,13 +391,12 @@ function ContactForm({ onClose }) {
                     className="w-full px-4 py-2.5 rounded-xl text-sm outline-none transition-all border"
                     style={{
                       background: "#FFFFFF",
-                      border: "1.5px solid rgba(0,55,127,0.15)",
-                      color: "#1C1C1C",
-                      fontFamily: "'Poppins', sans-serif",
+                      border: "1.5px solid rgba(13,45,68,0.15)",
+                      color: "#0A1E2D",
                     }}
-                    onFocus={(e) => (e.target.style.borderColor = "#2695EB")}
+                    onFocus={(e) => (e.target.style.borderColor = "#4A9DBD")}
                     onBlur={(e) =>
-                      (e.target.style.borderColor = "rgba(0,55,127,0.15)")
+                      (e.target.style.borderColor = "rgba(13,45,68,0.15)")
                     }
                   />
                 </div>
@@ -408,8 +404,7 @@ function ContactForm({ onClose }) {
 
               <div>
                 <label
-                  className="block text-xs font-semibold mb-1.5 text-[#00377F]"
-                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                  className="block text-xs font-semibold mb-1.5 text-[#0D2D44]"
                 >
                   Message
                 </label>
@@ -422,13 +417,12 @@ function ContactForm({ onClose }) {
                   className="w-full px-4 py-2.5 rounded-xl text-sm outline-none transition-all border resize-none"
                   style={{
                     background: "#FFFFFF",
-                    border: "1.5px solid rgba(0,55,127,0.15)",
-                    color: "#1C1C1C",
-                    fontFamily: "'Poppins', sans-serif",
+                    border: "1.5px solid rgba(13,45,68,0.15)",
+                    color: "#0A1E2D",
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = "#2695EB")}
+                  onFocus={(e) => (e.target.style.borderColor = "#4A9DBD")}
                   onBlur={(e) =>
-                    (e.target.style.borderColor = "rgba(0,55,127,0.15)")
+                    (e.target.style.borderColor = "rgba(13,45,68,0.15)")
                   }
                 />
               </div>
@@ -438,9 +432,8 @@ function ContactForm({ onClose }) {
                 className="w-full py-3 rounded-xl text-sm font-semibold text-white cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
-                  fontFamily: "'Poppins', sans-serif",
-                  boxShadow: "0 4px 20px rgba(0,55,127,0.35)",
+                    "linear-gradient(135deg, #0D2D44 0%, #4A9DBD 100%)",
+                  boxShadow: "0 4px 20px rgba(13,45,68,0.35)",
                 }}
               >
                 Send Message
@@ -470,11 +463,11 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
         className={`w-7 h-7 rounded-[10px] flex-shrink-0 flex items-center justify-center text-[13px]`}
         style={{
           background: isBot
-            ? "linear-gradient(135deg, #00377F, #2695EB)"
-            : "linear-gradient(135deg, #1C1C1C, #444)",
+            ? "linear-gradient(135deg, #0D2D44, #4A9DBD)"
+            : "linear-gradient(135deg, #2E5470, #4A9DBD)",
           boxShadow: isBot
-            ? "0 3px 10px rgba(0,55,127,0.35)"
-            : "0 3px 10px rgba(28,28,28,0.3)",
+            ? "0 3px 10px rgba(13,45,68,0.35)"
+            : "0 3px 10px rgba(10,30,45,0.3)",
         }}
       >
         {isBot ? "🌟" : "👤"}
@@ -485,22 +478,21 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
         <div
           className={`relative max-w-[280px] px-3.5 py-2.5 text-[13.5px] leading-relaxed`}
           style={{
-            fontFamily: "'Poppins', sans-serif",
             ...(isBot
               ? {
                   background: "#FFFFFF",
-                  color: "#1C1C1C",
+                  color: "#0A1E2D",
                   borderRadius: "18px 18px 18px 4px",
-                  border: "1px solid rgba(0,55,127,0.1)",
+                  border: "1px solid rgba(13,45,68,0.1)",
                   boxShadow:
-                    "0 2px 12px rgba(0,55,127,0.08), 0 1px 3px rgba(0,0,0,0.04)",
+                    "0 2px 12px rgba(13,45,68,0.08), 0 1px 3px rgba(0,0,0,0.04)",
                 }
               : {
                   background:
-                    "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
+                    "linear-gradient(135deg, #0D2D44 0%, #4A9DBD 100%)",
                   color: "#FFFFFF",
                   borderRadius: "18px 18px 4px 18px",
-                  boxShadow: "0 6px 20px rgba(0,55,127,0.4)",
+                  boxShadow: "0 6px 20px rgba(13,45,68,0.4)",
                 }),
           }}
           dangerouslySetInnerHTML={{ __html: parseMarkdown(text) }}
@@ -515,22 +507,21 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
                 disabled={isProcessing}
                 className="px-3 py-1.5 rounded-full text-[12.5px] font-semibold transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  background: "#F1F2FC",
-                  color: "#00377F",
-                  border: "1.5px solid rgba(0,55,127,0.15)",
+                  background: "#F5F9FC",
+                  color: "#0D2D44",
+                  border: "1.5px solid rgba(13,45,68,0.15)",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background =
-                    "linear-gradient(135deg, #00377F, #2695EB)";
+                    "linear-gradient(135deg, #0D2D44, #4A9DBD)";
                   e.currentTarget.style.color = "#FFFFFF";
                   e.currentTarget.style.border = "1.5px solid transparent";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#F1F2FC";
-                  e.currentTarget.style.color = "#00377F";
+                  e.currentTarget.style.background = "#F5F9FC";
+                  e.currentTarget.style.color = "#0D2D44";
                   e.currentTarget.style.border =
-                    "1.5px solid rgba(0,55,127,0.15)";
+                    "1.5px solid rgba(13,45,68,0.15)";
                 }}
               >
                 {option.label}
@@ -542,8 +533,7 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
         <div
           className={`text-[9.5px] mt-1 px-1 ${isBot ? "" : "text-right"}`}
           style={{
-            color: "rgba(28,28,28,0.3)",
-            fontFamily: "'Poppins', sans-serif",
+            color: "rgba(10,30,45,0.3)",
           }}
         >
           {fmt(time)}
@@ -561,7 +551,7 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
       className="relative overflow-hidden px-5 pt-[18px] pb-5"
       style={{
         background:
-          "linear-gradient(135deg, #00377F 0%, #0052b8 45%, #2695EB 100%)",
+          "linear-gradient(135deg, #0D2D44 0%, #2E5470 45%, #4A9DBD 100%)",
       }}
     >
       {/* Ambient layers */}
@@ -613,7 +603,6 @@ function ChatHeader({ minimized, onClear, onToggleMinimize, onClose }) {
               className="text-xs font-medium"
               style={{
                 color: "rgba(255,255,255,0.7)",
-                fontFamily: "'Poppins', sans-serif",
               }}
             >
               Online · Information Center
@@ -747,7 +736,7 @@ export default function Chatbot() {
   };
 
   return (
-    <div style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <div >
       {/* ── Contact Form Modal ── */}
       {showForm && <ContactForm onClose={() => setShowForm(false)} />}
 
@@ -757,9 +746,9 @@ export default function Chatbot() {
           className="fixed bottom-28 right-7 z-[9998] w-[390px] rounded-3xl overflow-hidden flex flex-col origin-bottom-right animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
           style={{
             background: "#FFFFFF",
-            border: "1px solid rgba(0,55,127,0.15)",
+            border: "1px solid rgba(13,45,68,0.15)",
             boxShadow:
-              "0 2px 4px rgba(0,55,127,0.04), 0 8px 24px rgba(0,55,127,0.1), 0 32px 80px rgba(0,55,127,0.2)",
+              "0 2px 4px rgba(13,45,68,0.04), 0 8px 24px rgba(13,45,68,0.1), 0 32px 80px rgba(13,45,68,0.2)",
           }}
         >
           <ChatHeader
@@ -775,16 +764,15 @@ export default function Chatbot() {
               <div
                 className="flex-1 overflow-y-auto px-3.5 py-4 flex flex-col gap-3 max-h-[430px] min-h-[220px] scroll-smooth [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:rounded-full"
                 style={{
-                  background: "#F1F2FC",
-                  scrollbarColor: "#2695EB transparent",
+                  background: "#F5F9FC",
+                  scrollbarColor: "#4A9DBD transparent",
                 }}
               >
                 {messages.length === 0 ? (
                   <div
                     className="flex justify-center items-center h-full text-sm"
                     style={{
-                      color: "rgba(28,28,28,0.4)",
-                      fontFamily: "'Poppins', sans-serif",
+                      color: "rgba(10,30,45,0.4)",
                     }}
                   >
                     Click the button below to get help
@@ -807,7 +795,7 @@ export default function Chatbot() {
                 className="px-3.5 pt-3 pb-3.5 flex flex-col gap-2.5"
                 style={{
                   background: "#FFFFFF",
-                  borderTop: "1px solid rgba(0,55,127,0.07)",
+                  borderTop: "1px solid rgba(13,45,68,0.07)",
                 }}
               >
                 <button
@@ -815,9 +803,8 @@ export default function Chatbot() {
                   className="w-full py-2.5 rounded-xl text-sm font-semibold text-white cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg"
                   style={{
                     background:
-                      "linear-gradient(135deg, #00377F 0%, #2695EB 100%)",
-                    fontFamily: "'Poppins', sans-serif",
-                    boxShadow: "0 4px 16px rgba(0,55,127,0.3)",
+                      "linear-gradient(135deg, #0D2D44 0%, #4A9DBD 100%)",
+                    boxShadow: "0 4px 16px rgba(13,45,68,0.3)",
                   }}
                 >
                   ✉️ &nbsp;Contact Us
@@ -825,8 +812,7 @@ export default function Chatbot() {
                 <p
                   className="text-center text-[10px] tracking-wide"
                   style={{
-                    color: "rgba(28,28,28,0.25)",
-                    fontFamily: "'Poppins', sans-serif",
+                    color: "rgba(10,30,45,0.25)",
                   }}
                 >
                   ⚡ Information Hub · 24/7 Support · No booking required
@@ -843,8 +829,8 @@ export default function Chatbot() {
         title="Airline Support Assistant"
         className="fixed bottom-7 right-7 z-[9999] w-[68px] h-[68px] rounded-full border-none cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-rotate-[5deg] animate-[ring_2.5s_infinite] overflow-visible"
         style={{
-          background: "linear-gradient(145deg, #00377F, #2695EB, #5ab5f7)",
-          boxShadow: "0 10px 32px rgba(0,55,127,0.5)",
+          background: "linear-gradient(145deg, #0D2D44, #4A9DBD, #7DC4E0)",
+          boxShadow: "0 10px 32px rgba(13,45,68,0.5)",
         }}
       >
         {open ? (
@@ -860,7 +846,7 @@ export default function Chatbot() {
         {!open && unread > 0 && (
           <span
             className="absolute -top-0.5 -right-0.5 text-white text-[10px] font-extrabold min-w-5 h-5 rounded-full px-1 flex items-center justify-center border-2 border-white animate-[badgePop_0.4s_cubic-bezier(0.34,1.56,0.64,1)]"
-            style={{ background: "#F0EBE8", color: "#1C1C1C" }}
+            style={{ background: "#DAEEF8", color: "#0A1E2D" }}
           >
             {unread}
           </span>
@@ -869,16 +855,14 @@ export default function Chatbot() {
 
       {/* ── Keyframes ── */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Gloock&family=Poppins:wght@400;500;600;700&display=swap');
-
         @keyframes popOpen {
           0%   { opacity:0; transform: scale(0.7) translateY(30px) rotateX(8deg); }
           100% { opacity:1; transform: scale(1) translateY(0) rotateX(0deg); }
         }
         @keyframes ring {
-          0%   { box-shadow: 0 0 0 0 rgba(38,149,235,0.5), 0 10px 32px rgba(0,55,127,0.5); }
-          70%  { box-shadow: 0 0 0 14px rgba(38,149,235,0), 0 10px 32px rgba(0,55,127,0.5); }
-          100% { box-shadow: 0 0 0 0 rgba(38,149,235,0), 0 10px 32px rgba(0,55,127,0.5); }
+          0%   { box-shadow: 0 0 0 0 rgba(74,157,189,0.5), 0 10px 32px rgba(13,45,68,0.45); }
+          70%  { box-shadow: 0 0 0 14px rgba(74,157,189,0), 0 10px 32px rgba(13,45,68,0.45); }
+          100% { box-shadow: 0 0 0 0 rgba(74,157,189,0), 0 10px 32px rgba(13,45,68,0.45); }
         }
         @keyframes plane3d {
           0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }

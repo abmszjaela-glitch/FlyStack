@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 const LANDING_LINKS = [
   { label: "Home", href: "home" },
   { label: "Features", href: "features" },
@@ -44,22 +45,33 @@ function useLandingSectionNav() {
   return { goToSection, goHome };
 }
 
-function LandingNavLink({ sectionId, label, isActive, onNavigate }) {
+function LandingNavLink({ sectionId, label, isActive, onNavigate, index = 0 }) {
   return (
-    <li>
+    <motion.li
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.08 * index, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+    >
       <button
         type="button"
         onClick={() => onNavigate(sectionId)}
-        className={`relative inline-block cursor-pointer border-0 bg-transparent p-0 text-[13px] uppercase tracking-wide text-[#2E5470]
-          no-underline hover:text-[#0D2D44] transition-colors ${
+        className={`nav-link-animate relative inline-block cursor-pointer border-0 bg-transparent p-0 text-[13px] uppercase tracking-wide text-[#2E5470]
+          no-underline hover:text-[#0D2D44] ${
             isActive
               ? "font-medium text-[#0D2D44]"
-              : "font-light after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:h-0.5 after:bg-[#4A9DBD] after:scale-x-0 after:origin-center after:transition-transform after:duration-200 hover:after:scale-x-100"
+              : "font-light after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:h-0.5 after:bg-[#4A9DBD] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"
           }`}
       >
         {label}
+        {isActive && (
+          <motion.span
+            layoutId="nav-active-line"
+            className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-[#4A9DBD]"
+            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+          />
+        )}
       </button>
-    </li>
+    </motion.li>
   );
 }
 
@@ -104,34 +116,42 @@ export default function Navbar({
 
   if (variant === "landing") {
     return (
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 transition-all ${
+      <motion.nav
+        initial={{ y: -24, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 transition-all duration-300 ${
           scrolled
             ? "bg-[rgba(245,249,252,0.85)] backdrop-blur-md shadow-lg shadow-black/5"
             : "bg-transparent"
         }`}
       >
         {/* Logo */}
-        <button
+        <motion.button
           type="button"
           onClick={goHome}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
           className="cursor-pointer border-0 bg-transparent p-0"
         >
           <h1 className="text-2xl capitalize font-semibold">
             <span style={{ color: "#19232D" }}>Fly</span>
             <span style={{ color: "#4A9DBD" }}>Stack</span>
           </h1>
-        </button>
+        </motion.button>
 
         {/* Centered nav links */}
-        <ul
-          className={`absolute left-1/2 -translate-x-1/2 flex gap-10 list-none m-0 overflow-visible px-10 py-4 rounded-full ${
+        <motion.ul
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className={`absolute left-1/2 -translate-x-1/2 flex gap-10 list-none m-0 overflow-visible px-10 py-4 rounded-full transition-all duration-300 ${
             scrolled
               ? "bg-transparent"
               : "bg-[rgba(245,249,252,0.85)] backdrop-blur-md border border-[rgba(74,157,189,0.18)] shadow-lg shadow-black/5"
           }`}
         >
-          {LANDING_LINKS.map(({ label, href, mega }) =>
+          {LANDING_LINKS.map(({ label, href, mega }, index) =>
             mega ? (
               <NavMegaMenu
                 key={href}
@@ -149,14 +169,15 @@ export default function Navbar({
                 label={label}
                 isActive={activeSection === href}
                 onNavigate={goToSection}
+                index={index}
               />
             ),
           )}
-        </ul>
+        </motion.ul>
 
         {/* Right: auth actions */}
         <div className="flex items-center gap-2.5"></div>
-      </nav>
+      </motion.nav>
     );
   }
 

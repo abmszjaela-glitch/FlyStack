@@ -104,6 +104,58 @@ body {
   animation: slideUp 0.25s ease-out;
 }
 
+@keyframes loadBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes navReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-load-bar {
+  animation: loadBar 1.1s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 2.2s ease-in-out infinite;
+}
+
+.animate-nav-reveal {
+  animation: navReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.nav-link-animate {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-link-animate:hover {
+  transform: translateY(-1px);
+}
+
 /* Ensure proper stacking context */
 .relative {
   isolation: isolate;

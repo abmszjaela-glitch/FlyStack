@@ -11,6 +11,7 @@ import ContactSection from "./User/Contact.jsx";
 
 import element2 from "../assets/element/element-2.png";
 import Footer from "../components/Footer.jsx";
+import AirlineSupportChatbot from "../components/ChatbotNoAI.jsx";
 
 export default function Landing() {
   const [activeSection, setActiveSection] = useState("home");
@@ -743,6 +744,7 @@ export default function Landing() {
         </Reveal>
       </section>
 
+      <AirlineSupportChatbot />
       <Footer />
     </div>
   );

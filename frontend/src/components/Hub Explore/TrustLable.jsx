@@ -1,6 +1,6 @@
 const TrustLable = () => {
   return (
-   <div className="flex flex-wrap items-center justify-center p-1 rounded-full bg-white border border-gray-300 text-sm">
+   <div className="flex flex-wrap items-center justify-center p-1 text-sm text-[#0A1E2D] font-medium drop-shadow-sm">
             <div className="flex items-center">
                 <img className="w-7.5 rounded-full border-3 border-white"
                     src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"

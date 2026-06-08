@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <div>
       <footer
-        className="bg-[#F5F9FC] border-t border-[rgba(74,157,189,0.18)]
-                         px-14 py-10 flex items-center justify-between"
+        className="w-full bg-[#F5F9FC] border-t border-[rgba(74,157,189,0.18)]
+                         px-4 sm:px-6 lg:px-14 py-8 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0"
       >
         <a href="/">
           <h1 className="text-2xl capitalize font-black">

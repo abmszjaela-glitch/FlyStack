@@ -102,8 +102,7 @@ const services = [
 
 export default function FlyStackServices() {
   return (
-    <section className="flex flex-col items-center bg-[#F5F9FC] px-4 py-4 pb-20">
-      {" "}
+    <section className="relative flex w-full flex-col items-center bg-[#F5F9FC] px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-hidden">
       {/* Decorative blurs */}
       <div
         className="absolute top-20 -right-20 w-96 h-96 rounded-full opacity-[0.04] pointer-events-none"
@@ -122,7 +121,7 @@ export default function FlyStackServices() {
           backgroundSize: "32px 32px",
         }}
       />
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <span

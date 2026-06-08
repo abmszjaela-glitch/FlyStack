@@ -12,12 +12,11 @@ const LeadingCompany = () => {
 
     return (
         
-        <div className="mt-5">
-            
-            <h3 className="text-lg font-semibold text-gray-700 text-center">
-    Trusted by Thousands of Travelers Worldwide
-</h3>
-            <div className="flex flex-wrap items-center justify-center gap-12 mt-14 max-md:px-2">
+        <div className="mt-5 w-full">
+            <h3 className="text-lg md:text-xl font-bold text-[#0A1E2D] text-center mx-auto max-w-xl drop-shadow-sm">
+                Trusted by Thousands of Travelers Worldwide
+            </h3>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mt-10 md:mt-14 w-full">
                 {airlines.map((logo, index) => (
                     <div key={index} className="w-32 h-16 flex items-center justify-center">
                         <img
