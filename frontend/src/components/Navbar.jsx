@@ -5,6 +5,7 @@ const LANDING_LINKS = [
   { label: "Home", href: "home" },
   { label: "Features", href: "features" },
   { label: "Services", href: "flights" },
+ { label: "Pricing", href: "pricing" },
   { label: "About Us", href: "about" },
   { label: "Contact", href: "contact" },
 ];

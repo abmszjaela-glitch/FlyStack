@@ -8,7 +8,7 @@ import FlightsSection from "./User/Flightselection.jsx";
 import ServicesSection from "./User/Service.jsx";
 import AboutSection from "./User/About.jsx";
 import ContactSection from "./User/Contact.jsx";
-
+import PricingCard from "../components/Hub Explore/PricingCard.jsx"
 import element2 from "../assets/element/element-2.png";
 import Footer from "../components/Footer.jsx";
 import AirlineSupportChatbot from "../components/ChatbotNoAI.jsx";
@@ -38,6 +38,7 @@ export default function Landing() {
         "monitor",
         "flights",
         "services",
+         "pricing",
         "about",
         "contact",
       ];
@@ -701,6 +702,10 @@ export default function Landing() {
 
       <FlightsSection />
       <ServicesSection />
+
+     <section id="pricing">
+  <PricingCard/>
+</section>
       <AboutSection />
       <ContactSection />
 
