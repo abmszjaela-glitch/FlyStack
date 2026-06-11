@@ -9,7 +9,7 @@ export default function LoadingScreen() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.45, ease: "easeInOut" }}
     >
-      {/* Ambient circles */}
+    
       <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full border border-[#4A9DBD]/10 pointer-events-none" />
       <div className="absolute -bottom-20 -left-10 w-56 h-56 rounded-full border border-[#4A9DBD]/10 pointer-events-none" />
 

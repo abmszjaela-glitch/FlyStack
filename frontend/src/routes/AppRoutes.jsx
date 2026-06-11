@@ -18,7 +18,6 @@ export default function AppRoutes() {
   useEffect(() => {
     const duration = isFirstLoad.current ? 1500 : 600;
     setLoading(true);
-
     const timer = window.setTimeout(() => {
       setLoading(false);
       isFirstLoad.current = false;
