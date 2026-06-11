@@ -8,7 +8,7 @@ import FlightsSection from "./User/Flightselection.jsx";
 import ServicesSection from "./User/Service.jsx";
 import AboutSection from "./User/About.jsx";
 import ContactSection from "./User/Contact.jsx";
-import PricingCard from "../components/Hub Explore/PricingCard.jsx"
+import PricingCard from "../components/Hub Explore/PricingCard.jsx";
 import element2 from "../assets/element/element-2.png";
 import Footer from "../components/Footer.jsx";
 import AirlineSupportChatbot from "../components/ChatbotNoAI.jsx";
@@ -38,7 +38,7 @@ export default function Landing() {
         "monitor",
         "flights",
         "services",
-         "pricing",
+        "pricing",
         "about",
         "contact",
       ];
@@ -59,10 +59,10 @@ export default function Landing() {
 
       <section
         id="home"
-        className="min-h-screen grid grid-cols-2 pt-20 inset-0
+        className="grid min-h-screen grid-cols-1 pt-16 lg:grid-cols-2 lg:pt-20
                    bg-gradient-to-br from-[#DAEEF8]/60 via-[#EDF6FB] to-[#C8E8F5]/40"
       >
-        <div className="relative overflow-hidden">
+        <div className="relative min-h-[360px] overflow-hidden sm:min-h-[460px] lg:min-h-0">
           <div
             className="absolute -top-24 -left-16 w-[420px] h-[420px] rounded-full
                        bg-[radial-gradient(circle,rgba(184,221,237,0.45)_0%,transparent_70%)]
@@ -78,7 +78,7 @@ export default function Landing() {
             <img
               src={element2}
               alt="3D Plane"
-              className="w-full max-w-[1500px] object-contain drop-shadow-2xl anim-drop select-none pointer-events-none"
+              className="w-full max-w-[760px] object-contain drop-shadow-2xl anim-drop select-none pointer-events-none lg:max-w-[1500px]"
               style={{ filter: "drop-shadow(0 32px 48px rgba(13,45,68,0.18))" }}
             />
           </div>
@@ -86,13 +86,13 @@ export default function Landing() {
           <div
             className="absolute top-[22%] left-[6%] z-20
                        bg-white/90 backdrop-blur-md rounded-2xl border border-white/90
-                       shadow-[0_4px_24px_rgba(13,45,68,0.10)] p-4 anim-hero"
+                       shadow-[0_4px_24px_rgba(13,45,68,0.10)] p-3 sm:p-4 anim-hero"
             style={{ animationDelay: "0.4s" }}
           >
             <p className="text-[10.5px] uppercase tracking-[0.8px] text-[#6B98B8] mb-1">
               Today's Flights
             </p>
-            <p className="text-[22px] font-semibold text-[#0D2D44]">
+            <p className="text-lg font-semibold text-[#0D2D44] sm:text-[22px]">
               128 Flights
             </p>
             <p className="text-[11px] text-[#2E5470] mt-0.5">
@@ -103,13 +103,13 @@ export default function Landing() {
           <div
             className="absolute bottom-[20%] right-[5%] z-20
                        bg-white/90 backdrop-blur-md rounded-2xl border border-white/90
-                       shadow-[0_4px_24px_rgba(13,45,68,0.10)] p-4 anim-hero"
+                       shadow-[0_4px_24px_rgba(13,45,68,0.10)] p-3 sm:p-4 anim-hero"
             style={{ animationDelay: "0.6s" }}
           >
             <p className="text-[10.5px] uppercase tracking-[0.8px] text-[#6B98B8] mb-1">
               Safety Index
             </p>
-            <p className="text-[22px] font-semibold text-[#0D2D44]">9.7 / 10</p>
+            <p className="text-lg font-semibold text-[#0D2D44] sm:text-[22px]">9.7 / 10</p>
             <p className="text-[11px] text-[#2E5470] mt-0.5">
               Excellent — Fully compliant operations
             </p>
@@ -133,7 +133,7 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="relative flex flex-col justify-center px-16 py-10">
+        <div className="relative flex flex-col justify-center px-6 py-12 sm:px-10 lg:px-16 lg:py-10">
           <div
             className="absolute bottom-20 left-[35%] w-64 h-64 rounded-full pointer-events-none
                        bg-[radial-gradient(circle,rgba(125,196,224,0.3)_0%,transparent_70%)] blur-[60px]"
@@ -150,7 +150,7 @@ export default function Landing() {
           </div>
 
           <p
-            className="text-8xl gloock font-light leading-[1.05] tracking-[-1px] text-[#0A1E2D] mb-7 anim-hero"
+            className="gloock mb-7 text-5xl font-light leading-[1.05] tracking-[-1px] text-[#0A1E2D] anim-hero sm:text-6xl lg:text-8xl"
             style={{ animationDelay: "0.2s" }}
           >
             Flight,
@@ -161,7 +161,7 @@ export default function Landing() {
           </p>
 
           <p
-            className="text-base font-light leading-[1.75] text-[#2E5470] max-w-[420px] mb-11 anim-hero"
+            className="mb-8 max-w-[420px] text-sm font-light leading-[1.75] text-[#2E5470] anim-hero sm:mb-11 sm:text-base"
             style={{ animationDelay: "0.3s" }}
           >
             Monitor your flights in real time, track performance metrics,
@@ -170,12 +170,12 @@ export default function Landing() {
           </p>
 
           <div
-            className="flex items-center gap-4 anim-hero"
+            className="flex flex-col gap-3 anim-hero sm:flex-row sm:items-center sm:gap-4"
             style={{ animationDelay: "0.4s" }}
           >
             <a
               onClick={() => navigate("/hub")}
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl
                          bg-[#0D2D44] text-white text-[15px] font-medium no-underline
                          shadow-[0_8px_28px_rgba(13,45,68,0.25)] hover:bg-[#1A4A6B]
                          hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(13,45,68,0.3)]
@@ -199,7 +199,7 @@ export default function Landing() {
 
       <section
         id="features"
-        className="bg-white border-t border-[rgba(74,157,189,0.18)] px-14 py-20"
+        className="bg-white border-t border-[rgba(74,157,189,0.18)] px-6 py-16 sm:px-8 lg:px-14 lg:py-20"
       >
         <Reveal className="text-center mb-14">
           <p className="text-[11px] uppercase tracking-[1.5px] text-[#4A9DBD] font-medium mb-4">
@@ -211,7 +211,7 @@ export default function Landing() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {features.map((f, i) => (
             <Reveal key={f.name} delay={i * 80}>
               <div
@@ -237,12 +237,12 @@ export default function Landing() {
           ))}
         </div>
       </section>
-      <section className="bg-[#0D2D44] grid grid-cols-4">
+      <section className="grid grid-cols-2 bg-[#0D2D44] lg:grid-cols-4">
         {metrics.map((m, i) => (
           <Reveal
             key={m.label}
             delay={i * 80}
-            className={`px-10 py-14 text-center ${
+            className={`px-5 py-10 text-center sm:px-10 sm:py-14 ${
               i < metrics.length - 1 ? "border-r border-white/10" : ""
             }`}
           >
@@ -262,14 +262,14 @@ export default function Landing() {
 
       <section
         id="monitor"
-        className="bg-[#F5F9FC] px-14 py-24 relative overflow-hidden"
+        className="relative overflow-hidden bg-[#F5F9FC] px-6 py-16 sm:px-8 lg:px-14 lg:py-24"
       >
         <div
           className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none
                      bg-[radial-gradient(circle,rgba(184,221,237,0.35)_0%,transparent_70%)] blur-[70px]"
         />
 
-        <div className="grid grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-24">
           {/* Left — steps */}
           <div>
             <Reveal>
@@ -292,7 +292,7 @@ export default function Landing() {
               {steps.map((s, i) => (
                 <Reveal key={s.num} delay={i * 80}>
                   <div
-                    className={`flex gap-6 py-7 items-start group ${
+                    className={`flex gap-4 py-6 items-start group sm:gap-6 sm:py-7 ${
                       i < steps.length - 1
                         ? "border-b border-[rgba(74,157,189,0.18)]"
                         : ""
@@ -322,13 +322,13 @@ export default function Landing() {
 
           {/* Right — mock dashboard */}
           <Reveal delay={160}>
-            <div className="relative z-10">
+            <div className="relative z-10 overflow-x-auto pb-2">
               <div
                 className="absolute -inset-10 rounded-3xl pointer-events-none
                            bg-[radial-gradient(circle,rgba(125,196,224,0.3)_0%,transparent_70%)] blur-[60px]"
               />
               <div
-                className="relative bg-white rounded-2xl shadow-[0_32px_80px_rgba(13,45,68,0.18)]
+                className="relative min-w-[680px] bg-white rounded-2xl shadow-[0_32px_80px_rgba(13,45,68,0.18)]
                            border border-[rgba(74,157,189,0.15)] overflow-hidden"
               >
                 <div className="bg-[#0D2D44] px-5 py-3 flex items-center justify-between">
@@ -703,17 +703,17 @@ export default function Landing() {
       <FlightsSection />
       <ServicesSection />
 
-     <section id="pricing">
-  <PricingCard/>
-</section>
+      <section id="pricing">
+        <PricingCard />
+      </section>
       <AboutSection />
       <ContactSection />
 
-      <section id="cta" className="bg-white px-14 py-24">
+      <section id="cta" className="bg-white px-6 py-16 sm:px-8 lg:px-14 lg:py-24">
         <Reveal>
           <div
             className="relative bg-gradient-to-br from-[#0D2D44] to-[#1A4A6B]
-                       rounded-[28px] px-20 py-20 text-center overflow-hidden"
+                       rounded-[24px] px-6 py-14 text-center overflow-hidden sm:px-10 lg:rounded-[28px] lg:px-20 lg:py-20"
           >
             <div
               className="absolute -top-40 -left-20 w-[500px] h-[500px] rounded-full pointer-events-none

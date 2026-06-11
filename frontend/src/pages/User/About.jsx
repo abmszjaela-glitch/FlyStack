@@ -22,7 +22,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-[#0D2D44] px-14 py-24 relative overflow-hidden"
+      className="relative overflow-hidden bg-[#0D2D44] px-6 py-16 sm:px-8 lg:px-14 lg:py-24"
     >
       {/* decorative circles */}
       <div
@@ -36,7 +36,7 @@ export default function AboutSection() {
 
       <div className="max-w-5xl mx-auto">
         {/* ── Heading + description ── */}
-        <Reveal className="text-center mb-16">
+        <Reveal className="mb-12 text-center lg:mb-16">
           <p className="text-[11px] uppercase tracking-[1.5px] text-[#7DC4E0] font-medium mb-5">
             Who We Are
           </p>
@@ -48,7 +48,7 @@ export default function AboutSection() {
             <br />
             <em className="not-italic text-[#B8DDED]">of aviation.</em>
           </h2>
-          <p className="text-lg font-light leading-[1.9] text-white/65 max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-sm font-light leading-[1.9] text-white/65 sm:text-lg">
             FlyStack is a modern airline service hub designed to make air travel
             simpler, faster, and more convenient. From flight search and online
             check-in to baggage services, travel information, and real-time
@@ -60,11 +60,11 @@ export default function AboutSection() {
         </Reveal>
 
         {/* ── Pillars ── */}
-        <div className="grid grid-cols-3 gap-6 mt-14">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3 lg:mt-14 lg:gap-6">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
               <div
-                className="bg-white/6 backdrop-blur-sm rounded-2xl p-8 border border-white/10
+                className="bg-white/6 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10
                            hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
                 <span className="text-4xl block mb-5">{p.icon}</span>

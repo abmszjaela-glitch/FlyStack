@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 const LANDING_LINKS = [
   { label: "Home", href: "home" },
   { label: "Features", href: "features" },
   { label: "Services", href: "flights" },
- { label: "Pricing", href: "pricing" },
+  { label: "Pricing", href: "pricing" },
   { label: "About Us", href: "about" },
   { label: "Contact", href: "contact" },
 ];
@@ -89,6 +90,7 @@ export default function Navbar({
   const [scrolled, setScrolled] = useState(false);
   const [profOpen, setProfOpen] = useState(false);
   const [showNotif, setShowNotif] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [search, setSearch] = useState("");
 
   const profRef = useRef(null);
@@ -116,69 +118,125 @@ export default function Navbar({
   }, []);
 
   if (variant === "landing") {
-    return (
-      <motion.nav
-        initial={{ y: -24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 transition-all duration-300 ${
-          scrolled
-            ? "bg-[rgba(245,249,252,0.85)] backdrop-blur-md shadow-lg shadow-black/5"
-            : "bg-transparent"
-        }`}
-      >
-        {/* Logo */}
-        <motion.button
-          type="button"
-          onClick={goHome}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-          className="cursor-pointer border-0 bg-transparent p-0"
-        >
-          <h1 className="text-2xl capitalize font-semibold">
-            <span style={{ color: "#19232D" }}>Fly</span>
-            <span style={{ color: "#4A9DBD" }}>Stack</span>
-          </h1>
-        </motion.button>
+    const handleMobileNavigate = (sectionId) => {
+      goToSection(sectionId);
+      setMobileOpen(false);
+    };
 
-        {/* Centered nav links */}
-        <motion.ul
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className={`absolute left-1/2 -translate-x-1/2 flex gap-10 list-none m-0 overflow-visible px-10 py-4 rounded-full transition-all duration-300 ${
-            scrolled
-              ? "bg-transparent"
-              : "bg-[rgba(245,249,252,0.85)] backdrop-blur-md border border-[rgba(74,157,189,0.18)] shadow-lg shadow-black/5"
+    return (
+      <>
+        <motion.nav
+          initial={{ y: -24, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3 transition-all duration-300 sm:px-8 lg:px-10 lg:py-4 ${
+            scrolled || mobileOpen
+              ? "bg-[rgba(245,249,252,0.92)] backdrop-blur-md shadow-lg shadow-black/5"
+              : "bg-transparent"
           }`}
         >
-          {LANDING_LINKS.map(({ label, href, mega }, index) =>
-            mega ? (
-              <NavMegaMenu
-                key={href}
-                label={label}
-                sectionId={href}
-                items={mega}
-                isActive={activeSection === href}
-                accent={href === "services" ? "gold" : "blue"}
-                onNavigateToSection={goToSection}
-              />
-            ) : (
-              <LandingNavLink
-                key={label}
-                sectionId={href}
-                label={label}
-                isActive={activeSection === href}
-                onNavigate={goToSection}
-                index={index}
-              />
-            ),
-          )}
-        </motion.ul>
+          {/* Logo */}
+          <motion.button
+            type="button"
+            onClick={() => {
+              goHome();
+              setMobileOpen(false);
+            }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="cursor-pointer border-0 bg-transparent p-0"
+          >
+            <h1 className="text-xl capitalize font-semibold sm:text-2xl">
+              <span style={{ color: "#19232D" }}>Fly</span>
+              <span style={{ color: "#4A9DBD" }}>Stack</span>
+            </h1>
+          </motion.button>
 
-        {/* Right: auth actions */}
-        <div className="flex items-center gap-2.5"></div>
-      </motion.nav>
+          {/* Centered nav links */}
+          <motion.ul
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className={`absolute left-1/2 m-0 hidden -translate-x-1/2 list-none gap-8 overflow-visible rounded-full px-8 py-4 transition-all duration-300 lg:flex xl:gap-10 xl:px-10 ${
+              scrolled
+                ? "bg-transparent"
+                : "bg-[rgba(245,249,252,0.85)] backdrop-blur-md border border-[rgba(74,157,189,0.18)] shadow-lg shadow-black/5"
+            }`}
+          >
+            {LANDING_LINKS.map(({ label, href, mega }, index) =>
+              mega ? (
+                <NavMegaMenu
+                  key={href}
+                  label={label}
+                  sectionId={href}
+                  items={mega}
+                  isActive={activeSection === href}
+                  accent={href === "services" ? "gold" : "blue"}
+                  onNavigateToSection={goToSection}
+                />
+              ) : (
+                <LandingNavLink
+                  key={label}
+                  sectionId={href}
+                  label={label}
+                  isActive={activeSection === href}
+                  onNavigate={goToSection}
+                  index={index}
+                />
+              ),
+            )}
+          </motion.ul>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen((open) => !open)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(74,157,189,0.2)] bg-white/85 text-[#0D2D44] shadow-sm backdrop-blur transition hover:bg-white lg:hidden"
+            aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+
+          {/* Right: auth actions */}
+          <div className="hidden items-center gap-2.5 lg:flex"></div>
+        </motion.nav>
+
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed left-4 right-4 top-[68px] z-40 rounded-2xl border border-[rgba(74,157,189,0.18)] bg-white/95 p-2 shadow-[0_18px_48px_rgba(13,45,68,0.16)] backdrop-blur-md lg:hidden"
+            >
+              <ul className="m-0 grid list-none gap-1 p-0">
+                {LANDING_LINKS.map(({ label, href }) => {
+                  const isActive = activeSection === href;
+                  return (
+                    <li key={href}>
+                      <button
+                        type="button"
+                        onClick={() => handleMobileNavigate(href)}
+                        className={`flex min-h-11 w-full items-center justify-between rounded-xl px-4 text-left text-sm font-medium transition ${
+                          isActive
+                            ? "bg-[#E7F4FA] text-[#0D2D44]"
+                            : "text-[#2E5470] hover:bg-[#F2F8FB] hover:text-[#0D2D44]"
+                        }`}
+                      >
+                        <span>{label}</span>
+                        {isActive && (
+                          <span className="h-2 w-2 rounded-full bg-[#4A9DBD]" />
+                        )}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </>
     );
   }
 

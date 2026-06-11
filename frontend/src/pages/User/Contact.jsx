@@ -27,7 +27,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-white border-t border-[rgba(74,157,189,0.18)] px-14 py-24 relative overflow-hidden"
+      className="relative overflow-hidden border-t border-[rgba(74,157,189,0.18)] bg-white px-6 py-16 sm:px-8 lg:px-14 lg:py-24"
     >
       {/* decorative blobs */}
       <div
@@ -39,7 +39,7 @@ export default function ContactSection() {
                    bg-[radial-gradient(circle,rgba(220,187,135,0.12)_0%,transparent_70%)] blur-[60px]"
       />
 
-      <div className="grid grid-cols-2 gap-20 items-start">
+      <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
         {/* ── Left: intro + channels ── */}
         <div>
           <Reveal>
@@ -60,7 +60,7 @@ export default function ContactSection() {
           </Reveal>
 
           <Reveal delay={120}>
-            <p className="text-base font-light leading-[1.8] text-[#2E5470] max-w-[420px] mb-10">
+            <p className="mb-8 max-w-[420px] text-sm font-light leading-[1.8] text-[#2E5470] sm:mb-10 sm:text-base">
               Whether you have questions about bookings, flight schedules,
               baggage policies, or travel requirements, our dedicated support
               team is ready to provide prompt and reliable service. Reach out to
@@ -73,7 +73,7 @@ export default function ContactSection() {
           <div className="flex flex-col gap-5">
             {channels.map((c, i) => (
               <Reveal key={c.label} delay={i * 80}>
-                <div className="flex items-center gap-5 group">
+                <div className="flex items-center gap-4 group sm:gap-5">
                   <div
                     className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#B8DDED] to-[#7DC4E0]
                                flex items-center justify-center text-[18px] text-[#0D2D44]
@@ -97,7 +97,7 @@ export default function ContactSection() {
         {/* ── Right: contact form ── */}
         <Reveal delay={160}>
           <div
-            className="bg-[#F5F9FC] rounded-[24px] p-10 border border-[rgba(74,157,189,0.18)]
+            className="bg-[#F5F9FC] rounded-[24px] p-5 sm:p-8 lg:p-10 border border-[rgba(74,157,189,0.18)]
                        shadow-[0_8px_40px_rgba(13,45,68,0.07)]"
           >
             <p className="text-xl font-semibold text-[#0D2D44] mb-7">
@@ -106,7 +106,7 @@ export default function ContactSection() {
 
             <div className="flex flex-col gap-5">
               {/* Name row */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {["First Name", "Last Name"].map((pl) => (
                   <div key={pl}>
                     <label className="text-[11px] uppercase tracking-[0.8px] text-[#6B98B8] font-medium block mb-2">

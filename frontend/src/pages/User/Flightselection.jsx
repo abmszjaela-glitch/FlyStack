@@ -5,7 +5,7 @@ export default function FlightsSection() {
   return (
     <section
       id="flights"
-      className="bg-white border-t border-[rgba(74,157,189,0.18)] px-14 py-24 relative overflow-hidden"
+      className="relative overflow-hidden border-t border-[rgba(74,157,189,0.18)] bg-white px-6 py-16 sm:px-8 lg:px-14 lg:py-24"
     >
       <div
         className="absolute top-0 left-0 w-80 h-80 rounded-full pointer-events-none
@@ -16,7 +16,7 @@ export default function FlightsSection() {
                      bg-[radial-gradient(circle,rgba(220,187,135,0.15)_0%,transparent_70%)] blur-[60px]"
       />
 
-      <Reveal className="text-center mb-16">
+      <Reveal className="mb-12 text-center lg:mb-16">
         <p className="text-[11px] uppercase tracking-[1.5px] text-[#4A9DBD] font-medium mb-4">
           Passenger Services
         </p>
@@ -26,14 +26,14 @@ export default function FlightsSection() {
         </h2>
       </Reveal>
 
-      <div className="grid grid-cols-3 gap-7">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         {flightCards.map((card, i) => {
           const Icon = card.Icon;
           return (
             <Reveal key={card.title} delay={i * 100}>
               <div
                 id={card.id}
-                className="relative scroll-mt-28 bg-[#F5F9FC] rounded-[22px] p-9 border border-[rgba(74,157,189,0.18)]
+                className="relative scroll-mt-28 bg-[#F5F9FC] rounded-[22px] p-6 sm:p-8 lg:p-9 border border-[rgba(74,157,189,0.18)]
                              overflow-hidden group hover:-translate-y-1.5
                              hover:shadow-[0_8px_36px_rgba(13,45,68,0.12)] hover:border-[#7DC4E0]
                              transition-all duration-300 cursor-default h-full flex flex-col"

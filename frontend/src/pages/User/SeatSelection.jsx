@@ -7,7 +7,7 @@ export default function SeatSelection() {
     <PageLayout activeSection="services">
       <section
         className="min-h-full border-t border-[rgba(74,157,189,0.18)] bg-[#F5F9FC]
-                   bg-gradient-to-br from-[#DAEEF8]/60 via-[#EDF6FB] to-[#C8E8F5]/40 px-14 py-24 pt-28"
+                   bg-gradient-to-br from-[#DAEEF8]/60 via-[#EDF6FB] to-[#C8E8F5]/40 px-6 py-16 pt-24 sm:px-8 lg:px-14 lg:py-24 lg:pt-28"
       >
         <div className="mx-auto max-w-2xl">
           <Link
@@ -21,7 +21,7 @@ export default function SeatSelection() {
           <div
             id="seat-selection"
             className="service-card relative scroll-mt-28 rounded-[18px] border border-[rgba(74,157,189,0.15)]
-                       bg-white p-7 overflow-hidden"
+                       bg-white p-6 sm:p-7 overflow-hidden"
           >
             <div
               className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl text-[22px]
@@ -38,7 +38,7 @@ export default function SeatSelection() {
             >
               Seat Selection
             </h1>
-            <p className="max-w-[420px] text-base font-light leading-[1.8] text-[#2E5470]">
+            <p className="max-w-[420px] text-sm font-light leading-[1.8] text-[#2E5470] sm:text-base">
               Choose the seat that best suits your travel needs.
             </p>
           </div>

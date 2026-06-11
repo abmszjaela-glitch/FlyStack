@@ -141,7 +141,7 @@ export default function Chatbot() {
       {/* ── POPUP ── */}
       {open && (
         <div
-          className="fixed bottom-28 right-7 z-[9998] w-[390px] rounded-3xl overflow-hidden flex flex-col bg-white shadow-2xl border border-blue-200 origin-bottom-right animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
+          className="fixed bottom-24 left-4 right-4 z-[9998] w-auto rounded-3xl overflow-hidden flex flex-col bg-white shadow-2xl border border-blue-200 origin-bottom-right animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards] sm:bottom-28 sm:left-auto sm:right-7 sm:w-[390px]"
           style={{
             boxShadow:
               "0 2px 4px rgba(23,65,196,0.04), 0 8px 24px rgba(23,65,196,0.1), 0 32px 80px rgba(23,65,196,0.2)",
@@ -248,7 +248,7 @@ export default function Chatbot() {
           {!minimized && (
             <>
               {/* Messages */}
-              <div className="flex-1 overflow-y-auto px-3.5 py-4 bg-[#f3f7ff] flex flex-col gap-3 max-h-[310px] min-h-[220px] scroll-smooth [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:bg-blue-200 [&::-webkit-scrollbar-thumb]:rounded-full">
+              <div className="flex-1 overflow-y-auto px-3.5 py-4 bg-[#f3f7ff] flex flex-col gap-3 max-h-[52vh] min-h-[220px] scroll-smooth sm:max-h-[310px] [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:bg-blue-200 [&::-webkit-scrollbar-thumb]:rounded-full">
                 {messages.map((m) => (
                   <div
                     key={m.id}
@@ -409,7 +409,7 @@ export default function Chatbot() {
       <button
         onClick={() => setOpen((o) => !o)}
         title="FlyStack AI Assistant"
-        className="fixed bottom-7 right-7 z-[9999] w-[68px] h-[68px] rounded-full border-none cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-rotate-[5deg] animate-[ring_2.5s_infinite] overflow-visible"
+        className="fixed bottom-5 right-5 z-[9999] w-14 h-14 rounded-full border-none cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-rotate-[5deg] animate-[ring_2.5s_infinite] overflow-visible sm:bottom-7 sm:right-7 sm:h-[68px] sm:w-[68px]"
         style={{
           background: "linear-gradient(145deg, #1741c4, #3b7de8, #5a9cf5)",
           boxShadow: "0 10px 32px rgba(23,65,196,0.5)",

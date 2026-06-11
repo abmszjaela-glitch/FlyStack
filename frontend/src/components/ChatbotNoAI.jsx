@@ -266,7 +266,7 @@ function ContactForm({ onClose }) {
       style={{ background: "rgba(13,45,68,0.45)", backdropFilter: "blur(6px)" }}
     >
       <div
-        className="relative w-[420px] rounded-3xl overflow-hidden animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
+        className="relative mx-4 w-[min(420px,calc(100vw-2rem))] rounded-3xl overflow-hidden animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
         style={{
           background: "#FFFFFF",
           boxShadow:
@@ -476,7 +476,7 @@ function ChatMessage({ message, onOptionClick, isProcessing }) {
       {/* Bubble + options */}
       <div>
         <div
-          className={`relative max-w-[280px] px-3.5 py-2.5 text-[13.5px] leading-relaxed`}
+          className={`relative max-w-[min(280px,72vw)] px-3.5 py-2.5 text-[13.5px] leading-relaxed`}
           style={{
             ...(isBot
               ? {
@@ -743,7 +743,7 @@ export default function Chatbot() {
       {/* ── Chat Window ── */}
       {open && (
         <div
-          className="fixed bottom-28 right-7 z-[9998] w-[390px] rounded-3xl overflow-hidden flex flex-col origin-bottom-right animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards]"
+          className="fixed bottom-24 left-4 right-4 z-[9998] w-auto rounded-3xl overflow-hidden flex flex-col origin-bottom-right animate-[popOpen_0.4s_cubic-bezier(0.34,1.56,0.64,1)_forwards] sm:bottom-28 sm:left-auto sm:right-7 sm:w-[390px]"
           style={{
             background: "#FFFFFF",
             border: "1px solid rgba(13,45,68,0.15)",
@@ -762,7 +762,7 @@ export default function Chatbot() {
             <>
               {/* Messages */}
               <div
-                className="flex-1 overflow-y-auto px-3.5 py-4 flex flex-col gap-3 max-h-[430px] min-h-[220px] scroll-smooth [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:rounded-full"
+                className="flex-1 overflow-y-auto px-3.5 py-4 flex flex-col gap-3 max-h-[55vh] min-h-[220px] scroll-smooth sm:max-h-[430px] [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:rounded-full"
                 style={{
                   background: "#F5F9FC",
                   scrollbarColor: "#4A9DBD transparent",
@@ -827,7 +827,7 @@ export default function Chatbot() {
       <button
         onClick={open ? () => setOpen(false) : handleOpenChat}
         title="Airline Support Assistant"
-        className="fixed bottom-7 right-7 z-[9999] w-[68px] h-[68px] rounded-full border-none cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-rotate-[5deg] animate-[ring_2.5s_infinite] overflow-visible"
+        className="fixed bottom-5 right-5 z-[9999] w-14 h-14 rounded-full border-none cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-rotate-[5deg] animate-[ring_2.5s_infinite] overflow-visible sm:bottom-7 sm:right-7 sm:h-[68px] sm:w-[68px]"
         style={{
           background: "linear-gradient(145deg, #0D2D44, #4A9DBD, #7DC4E0)",
           boxShadow: "0 10px 32px rgba(13,45,68,0.5)",
